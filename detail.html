@@ -11,22 +11,49 @@
     <script type="text/javascript"  src="js/jquery.bxslider.min.js"></script>
     <title>我的私人定制</title>
     <script>
-    $('.bxslider').bxSlider({
-  mode: 'fade',
-  captions: true
-});
+    $(function(){
+      $('.bxslider').bxSlider({
+        mode: 'fade',
+        captions: true
+      });
+      $('.cd-top li').click(function(){
+       $(this).addClass('active').siblings().removeClass('active');
+
+      });
+      $('.section dd span').click(function(){
+        var _s=$(this).parents('dd').find('span');
+        _s.find('i').remove();
+        $(this).append('<i></i>');
+        var _title=$(this).find("img").attr("title")+'-'+'￥'+$(this).find("img").data('price');
+        $(this).parent().prevAll("p").text(_title);
+
+      });
+      $('.section dt i').click(function(){
+        $(this).toggleClass('glyphicon-menu-up');
+        $(this).parent().next().slideToggle();
+      })
+    })
+
     </script>
   </head>
   <body>
     <div class="page-dz">
       <div  class="top-wrap">
   <div class="cd-top">
-  <ul><li class="active">椅型</li><li>1.椅子颜色</li><li>2.靠背及坐垫</li><li>3.扶手及托盘</li><li>4.轮子及脚盖</li><li>5.汇总</li></ul></div>
+  <ul><li class="active">
+    <a href="">椅型</a></li>
+    <li><a href="/#kb">1.靠背及坐垫</a></li>
+      <li><a href="/#yzys">2.椅子颜色</a></li>
+        <li><a href="/#tsfp">3.扶手及托盘</a></li>
+        <li>
+        <a href="/#lzjg">  4.轮子及脚盖</a></li><li><a href="">5.汇总</a></li></ul></div>
   <h1 class="headline">FA01-GN-01</h1>
 </div>
   <div class="main">
     <ul class="bxslider">
-    <li><img src="img/cd-main.png"></li></ul>
+    <li><img src="img/cd-main.png"></li>
+      <li><img src="img/cd-main-X.png"></li>
+        <li><img src="img/cd-main-B.png"></li></ul>
   <div class="sundry-wrap"><div class="rotate-wrap">
   <i class="d90"></i><span >|</span><i class="d180"></i></div>
   <dl class="totle-wrap">
@@ -37,84 +64,90 @@
 </div>
 <!-- 右侧选择定制 -->
 	<div class="section">
-	<dl class="item-wrap">
+    <dl id="kb">
+      <dt><i class="glyphicon glyphicon-menu-down"></i>靠背及坐垫</dt>
+      <dd>
+      <p class="price"></p>
+
+      <div><h5>靠背</h5>
+      <span><i ></i><img src="img/icon/dibk.png" title="D和I靠背" data-price="0"/></span>
+        <span><img src="img/icon/rbk.png" title="R-靠背" data-price="100"/></span>
+      </div>
+    </dd>
+    <dd>
+      <p class="price"></p>
+      <div><h5>坐垫</h5>
+      <span><i></i><img src="img/icon/dizd.png" title="D和I坐垫" data-price="0"/></span>
+        <span><img src="img/icon/rzd.png" title="R-坐垫" data-price="100"/></span>
+      </div>
+      </dd>
+    </dl>
+	<dl id="yzys">
     <dt><i class="glyphicon glyphicon-menu-down"></i>椅子颜色</dt>
     <dd>
 		<p class="price">黑色 - ￥0</p>
-	  <div class="itemchoose">
+
 		<div><h5>PU颜色</h5>
-		<span><i ></i><img src="img/icon/hlps-03.png" title="pu/黑色"/></span>
-		<span><img src="img/icon/hlps-06.png" title="PU/大红色"/></span>
-		<span><img src="img/icon/hlps-07.png" title="PU/海兰色"/></span>
-		<span><img src="img/icon/hlps-08.png" title="pu/纯白"/></span>
-		<span><img src="img/icon/hlps-10.png" title="pu/桔黄色"/></span>
-		<span><img src="img/icon/hlps-22.png" title="pu/亮黄"/></span>
-		<span><img src="img/icon/hlps-30.png" title="pu/淡紫"/></span>
+		<span><i ></i><img src="img/icon/hlps-03.png" title="pu/黑色" data-price="0" /></span>
+		<span><img src="img/icon/hlps-06.png" title="PU/大红色" data-price="0"/></span>
+		<span><img src="img/icon/hlps-07.png" title="PU/海兰色" data-price="0"/></span>
+		<span><img src="img/icon/hlps-08.png" title="pu/纯白" data-price="0"/></span>
+		<span><img src="img/icon/hlps-10.png" title="pu/桔黄色" data-price="0"/></span>
+		<span><img src="img/icon/hlps-22.png" title="pu/亮黄" data-price="0"/></span>
+		<span><img src="img/icon/hlps-30.png" title="pu/淡紫" data-price="0"/></span>
 		</div>
+
 		<div><h5>PVC颜色</h5>
-		<span><i ></i><img src="img/icon/dnsy-01.png" title="编织纹PVC/黑色/DN01"/></span>
-		<span><img src="img/icon/dnsy-10.png" title="PVC/黑色/DN03"/></span>
-		<span><img src="img/icon/dnsy-12.png" title="打孔PVC/黑色/DN02/（阻燃/环保）"/></span>
-		<span><img src="img/icon/dnsy-13.png"  title="打孔PVC/黑色/DN02">/></span>
-		<span><img src="img/icon/dnsy-14.png" title="条纹皮/英标阻燃"  /></span>
-		<span ><img src="img/icon/dnsy-15.png"  title="PVC/英标阻燃"/></span>
-		<span ><img src="img/icon/dnsy-16.png" title="新PVC/水墨兰/19-4324TPX（户外PVC）"/></span>
-		<span ><img src="img/icon/dnsy-17.png" title="新PVC/黑色（户外PVC）"/></span>
-		<span><img src="img/icon/dnsy-18.png" title="新PVC/海兰色/16-4535TPX（户外PVC）"/></span>
-		<span ><img src="img/icon/dnsy-19.png" title="新PVC/纯白（omp)（户外PVC）"/></span>
-		<span ><img src="img/icon/dnsy-20.png" title="新PVC/橘红/1655C（户外PVC）"/></span>
-		<span><img src="img/icon/dnsy-21.png"  title="PVC/纯白"/></span>
-		</div>
+		<span><i ></i><img src="img/icon/dnsy-01.png" title="编织纹PVC/黑色/DN01" data-price="0"/></span >
+		<span><img src="img/icon/dnsy-10.png" title="PVC/黑色/DN03" data-price="0" /></span>
+		<span><img src="img/icon/dnsy-12.png" title="打孔PVC/黑色/DN02/（阻燃/环保）" data-price="0"/></span>
+		<span><img src="img/icon/dnsy-13.png"  title="打孔PVC/黑色/DN02" data-price="0"/></span>
+		<span><img src="img/icon/dnsy-14.png" title="条纹皮/英标阻燃"  data-price="0"/></span>
+		<span ><img src="img/icon/dnsy-15.png"  title="PVC/英标阻燃" data-price="0"/></span>
+		<span ><img src="img/icon/dnsy-16.png" title="新PVC/水墨兰/19-4324TPX（户外PVC）" data-price="0"/></span>
+		<span ><img src="img/icon/dnsy-17.png" title="新PVC/黑色（户外PVC）" data-price="0"/></span>
+		<span><img src="img/icon/dnsy-18.png" title="新PVC/海兰色/16-4535TPX（户外PVC）" data-price="0"/ ></span>
+		<span ><img src="img/icon/dnsy-19.png" title="新PVC/纯白（omp)（户外PVC）" data-price="0"/></span>
+		<span ><img src="img/icon/dnsy-20.png" title="新PVC/橘红/1655C（户外PVC）" data-price="0"/></span>
+		<span><img src="img/icon/dnsy-21.png"  title="PVC/纯白" data-price="100"/></span>
 	</div>
 	</dd>
 	</dl>
-	<dl>
-		<dt><i class="glyphicon glyphicon-menu-down"></i>靠背及坐垫</dt>
-    <dd>
-    <p class="price">D和I靠背 - ￥0</p>
-    <div class="itemchoose">
-    <div><h5>靠背</h5>
-    <span><i ></i><img src="img/icon/dibk.png" title="D和I靠背"/></span>
-      <span><img src="img/icon/rbk.png" title="R-靠背"/></span>
-    </div>
-    <div class="itemchoose">
-    <div><h5>坐垫</h5>
-    <span><i></i><img src="img/icon/dizd.png" title="D和I坐垫"/></span>
-      <span><img src="img/icon/rzd.png" title="R-坐垫"/></span>
-    </div>
-    </dd>
-	</dl>
-  <dl>
+
+  <dl id="tsfp">
 		<dt><i class="glyphicon glyphicon-menu-down"></i>扶手及托盘</dt>
     <dd>
     <p class="price">3D扶手 - ￥0</p>
-    <div class="itemchoose">
     <div><h5>扶手</h5>
-    <span><i ></i><img src="img/icon/ts3d.png" title="3D扶手"/></span>
-      <span><img src="img/icon/ts4d.png" title="4D扶手"/></span>
+    <span><i ></i><img src="img/icon/ts3d.png" title="3D扶手" data-price="0"/></span>
+      <span><img src="img/icon/ts4d.png" title="4D扶手" data-price="100"/></span>
     </div>
-    <div class="itemchoose">
+  </dd>
+  <dd>
+    <p class="price"></p>
     <div><h5>托盘</h5>
-    <span><i></i><img src="img/icon/thd.png" title="蝴蝶托"/></span>
-      <span><img src="img/icon/tqw.png" title="青蛙托"/></span>
-    </div>
+    <span><i></i><img src="img/icon/thd.png" title="蝴蝶托" data-price="0"/></span>
+      <span><img src="img/icon/tqw.png" title="青蛙托"  data-price="100"/></span>
+</div>
     </dd>
 	</dl>
-  <dl>
+  <dl id="lzjg">
     <dt><i class="glyphicon glyphicon-menu-down"></i> 轮子及脚盖</dt>
     <dd>
       <p class="price">75溜冰轮 ￥199</p>
-      <div class="itemchoose">
       <div><h5>轮子</h5>
-  		<span><img src="img/icon/50cg.png" title="50常规轮"/></span>
-  		<span><img src="img/icon/50sd.png" title="50锁定轮"/></span>
-  		<span><img src="img/icon/75lb.png" title="75溜冰轮"/></span>
-  		<span><img src="img/icon/75l.png" title="75轮"/></span>
+  		<span><img src="img/icon/50cg.png" title="50常规轮" data-price="0"/></span>
+  		<span><img src="img/icon/50sd.png" title="50锁定轮" data-price="50"/></span>
+  		<span><img src="img/icon/75lb.png" title="75溜冰轮" data-price="50"/></span>
+      <span><img src="img/icon/75lb.png" title="75溜冰轮" data-price="50"/></span>
+  		<span><img src="img/icon/75l.png" title="75轮" data-price="50"/></span>
     </div>
-    <div class="itemchoose">
+</dd>
+<dd>
+    <p class="price"></p>
     <div><h5>脚盖</h5>
-    <span><img src="img/icon/50cg.png" title="铝合金五星脚脚盖"/></span>
-    <span><img src="img/icon/50sd.png" title="尼龙脚脚盖"/></span>
+    <span><img src="img/icon/jg.png" title="铝合金五星脚脚盖" data-price="100"/></span>
+    <span><img src="img/icon/jgnl.png" title="尼龙脚脚盖" data-price="0"/></span>
   </div>
   	</dd>
   </dl>

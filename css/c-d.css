@@ -25,9 +25,11 @@ font-size: 18px;
 width:20%;
 cursor: pointer;
 }
-.cd-top li.active,.cd-top li:hover{
-color: #fff;
+.cd-top li.active ,.cd-top li:hover {
 background: #e01222;
+}
+.cd-top li.active a,.cd-top li:hover a{
+  color:#fff;
 }
 .headline{
   font-size: 2.25rem;
@@ -48,7 +50,7 @@ background: #e01222;
   width: 59%;
 }
 
-.main .bxslider{
+/*.main .bxslider{
   height: calc(100vh - 21.5rem);
   margin-left: auto;
   margin-right: auto;
@@ -67,7 +69,7 @@ background: #e01222;
   max-width: 100%;
   max-height: 100%;
 
-}
+}*/
 .sundry-wrap{
   flex: 1 1 auto;
     position: relative;
@@ -132,7 +134,10 @@ font-weight: normal;
        width: 29%;
      }
      .section dt i{
-       float: right;
+       cursor: pointer;
+float: right;
+position: relative;
+top: 10px;
 }
    .section dt{
      font-size: 16px;
@@ -142,17 +147,18 @@ border-bottom: 1px solid #ddd;
 font-weight: normal;
    }
  .section .price{
+   font-weight: bold;
    margin-top:25px;
    margin-bottom: 25px;
    color:#333;
  }
- .item-wrap dd span{
+  .section dd span{
    position: relative;
    display: inline-block;
    cursor: pointer;
  }
 
-  .itemchoose span i{
+  .section span i{
       background: url('../img/icon/rightchoose.png') scroll no-repeat 0 0;
       height: 18px;
          position: absolute;
@@ -160,14 +166,10 @@ font-weight: normal;
          top: 21px;
          width: 18px;
   }
-    .itemchoose h5{
+    .section h5{
       margin-bottom: 5px;
+
     }
-  .itemchoose >div{
+  .section dd>div{
     margin-bottom: 15px;
   }
-
- .itemchoose img{
-   cursor: pointer;
-
- }

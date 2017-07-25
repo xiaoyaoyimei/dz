@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body onload="draw()">
+  	
+  	<img src="img/bg1.png"  id="frame" style="display: none;"/>
+  	<img src="img/img_the_scream.jpg" id="source" style="display: none;"/>
+    <canvas id="canvas" width="400" height="400"></canvas>
+    <script>
+    
+      function draw() {
+  var canvas = document.getElementById('canvas');
+  var ctx = canvas.getContext('2d');
+  // Draw frame
+ ctx.drawImage(document.getElementById('frame'),0,0);
+ ctx.globalCompositeOperation="source-in";
+  // Draw slice
+ ctx.drawImage(document.getElementById('source'),0,0);
+
+}
+    </script>
+  </body>

@@ -1,0 +1,173 @@
+.top-wrap{
+  background-color: #fff;
+   box-sizing: border-box;
+   display: block;
+   height: 7.625rem;
+   left: 0;
+   position: fixed;
+   right: 0;
+   top: 0;
+   z-index: 11;
+}
+
+.cd-top {
+box-shadow: 0 5px 20px -8px #4e4e4e;
+}
+.cd-top ul{
+  display: flex;
+margin:0 5.5%
+}
+.cd-top li{
+  float: left;
+line-height: 60px;
+text-align: center;
+font-size: 18px;
+width:20%;
+cursor: pointer;
+}
+.cd-top li.active,.cd-top li:hover{
+color: #fff;
+background: #e01222;
+}
+.headline{
+  font-size: 2.25rem;
+   line-height: 3.5rem;
+   padding-bottom: 0;
+   padding-top: 1.25rem;
+   margin-left: 5.5%;
+   color: #000;
+}
+.main{
+  bottom: 2.5em;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  left: 5.5%;
+  position: fixed;
+  top: 11.125rem;
+  width: 59%;
+}
+
+.main .bxslider{
+  height: calc(100vh - 21.5rem);
+  margin-left: auto;
+  margin-right: auto;
+  max-height: calc(56.25vw - 41.5vw * 0.5625);
+  max-width: calc(100vw - 41.5vw);
+  text-align: center;
+  width: calc(177.778vh - 23.5rem * 1.77778)
+}
+
+
+.bxslider li {
+  height: 100%;
+      width: 100%;
+}
+.bxslider li img{
+  max-width: 100%;
+  max-height: 100%;
+
+}
+.sundry-wrap{
+  flex: 1 1 auto;
+    position: relative;
+    border-top: 1px solid #ddd;
+      padding-top: 1.25em;
+}
+.rotate-wrap{
+   display: inline-block;
+    float: left;
+    padding-bottom: 0.6em;
+
+    position: absolute;
+    z-index: 10;
+  }
+
+  .rotate-wrap i{
+    width:60px;
+    height: 40px;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .d90{
+    background: url('../img/d90.png') scroll no-repeat 0 0;
+
+  }
+  .d180{
+    background: url('../img/d180.png') scroll no-repeat 0 0;
+  }
+  .rotate-wrap span{
+    left: 0;
+   margin: 0 10px;
+   position: relative;
+   top: -15px;
+  }
+  .totle-wrap {
+    color:#222;
+    display: table;
+    line-height: 1em;
+    margin-left: auto;
+    float: right;
+    font-size: 14px;
+    width:300px;
+  }
+
+  .totle-wrap dt{
+font-weight: normal;
+ text-align: left;
+
+  }
+    .totle-wrap dd{
+      text-align: right;
+   white-space: nowrap;
+   display: table-cell;
+   line-height: 1.4286rem;
+    }
+  .section{
+      box-sizing: border-box;
+       margin-left: 65.5%;
+       overflow: hidden;
+       padding-top: 10.125rem;
+       position: relative;
+       width: 29%;
+     }
+     .section dt i{
+       float: right;
+}
+   .section dt{
+     font-size: 16px;
+height: 42px;
+line-height: 42px;
+border-bottom: 1px solid #ddd;
+font-weight: normal;
+   }
+ .section .price{
+   margin-top:25px;
+   margin-bottom: 25px;
+   color:#333;
+ }
+ .item-wrap dd span{
+   position: relative;
+   display: inline-block;
+   cursor: pointer;
+ }
+
+  .itemchoose span i{
+      background: url('../img/icon/rightchoose.png') scroll no-repeat 0 0;
+      height: 18px;
+         position: absolute;
+         right: -2px;
+         top: 21px;
+         width: 18px;
+  }
+    .itemchoose h5{
+      margin-bottom: 5px;
+    }
+  .itemchoose >div{
+    margin-bottom: 15px;
+  }
+
+ .itemchoose img{
+   cursor: pointer;
+
+ }

@@ -1,39 +1,63 @@
 <!DOCTYPE HTML>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  	<link rel="stylesheet" href="css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="css/jquery.bxslider.min.css"/>
-    <link rel="stylesheet" href="css/base.css"/>
-    <link rel="stylesheet" href="css/c-d.css"/>
-    <script type="text/javascript"  src="js/jquery.min.js"></script>
-    <script type="text/javascript"  src="js/jquery.bxslider.min.js"></script>
-    <title>我的私人定制</title>
-    <script>
-    $(function(){
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/jquery.bxslider.min.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/c-d.css" />
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+  <title>我的私人定制</title>
+  <style>
+  .section dd img{
+   width: 50px;
+  }
+</style>
+  <script>
+    $(function () {
       $('.bxslider').bxSlider({
         mode: 'fade',
         captions: true
       });
-      $('.cd-top li').click(function(){
-       $(this).addClass('active').siblings().removeClass('active');
+      $('.cd-top li').click(function () {
+        $(this).addClass('active').siblings().removeClass('active');
 
       });
-      $('.section dd span').click(function(){
-        var _s=$(this).parents('dd').find('span');
-        _s.find('i').remove();
-        $(this).append('<i></i>');
-        var _title=$(this).find("img").attr("title")+'-'+'￥'+$(this).find("img").data('price');
+      $('.section dd span').click(function () {
+        var _s = $(this).parents('dd').find('span');
+        _s.removeClass("data").find('i').remove();
+        $(this).addClass("data").append('<i></i>');
+        var _title = $(this).find("img").attr("title") + '-' + '￥' + $(this).find("img").data('price');
         $(this).parent().prevAll("p").text(_title);
-
+        hecheng()
       });
-      $('.section dt i').click(function(){
+      $('.section dt i').click(function () {
         $(this).toggleClass('glyphicon-menu-up');
         $(this).parent().next().slideToggle();
       })
     })
+  </script>
+</head>
 
+<<<<<<< HEAD
+<body>
+  <div class="page-dz">
+    <div class="top-wrap">
+      <div class="cd-top">
+        <ul>
+          <li class="active">
+            <a href="">椅型</a></li>
+          <li><a href="/#kb">1.靠背及坐垫</a></li>
+          <li><a href="/#yzys">2.椅子颜色</a></li>
+          <li><a href="/#tsfp">3.扶手及托盘</a></li>
+          <li>
+            <a href="/#lzjg">  4.轮子及脚盖</a></li>
+          <li><a href="">5.汇总</a></li>
+        </ul>
+=======
     </script>
   </head>
   <body>
@@ -72,48 +96,95 @@
       <div><h5>靠背</h5>
       <span><i ></i><img src="img/icon/dibk.png" title="D和I靠背" data-price="0"/></span>
         <span><img src="img/icon/rbk.png" title="R-靠背" data-price="100"/></span>
+>>>>>>> 04aab647ff157d08fe1f43850e8b2e2ea840820e
       </div>
-    </dd>
-    <dd>
-      <p class="price"></p>
-      <div><h5>坐垫</h5>
-      <span><i></i><img src="img/icon/dizd.png" title="D和I坐垫" data-price="0"/></span>
-        <span><img src="img/icon/rzd.png" title="R-坐垫" data-price="100"/></span>
+      <h1 class="headline">FA01-GN-01</h1>
+    </div>
+    <div class="main">
+      <ul class="bxslider">
+        <li><img src="img/cd-main.png"></li>
+        <li><img src="img/cd-main-X.png"></li>
+        <li><img src="img/cd-main-B.png"></li>
+      </ul>
+      <div class="sundry-wrap">
+        <div class="rotate-wrap">
+          <i class="d90"></i><span>|</span><i class="d180"></i></div>
+        <dl class="totle-wrap">
+          <dt class="col-xs-7">基础价格：</dt>
+          <dd class="col-xs-5">￥1599</dd>
+          <dt class="col-xs-7">设备价格：</dt>
+          <dd class="col-xs-5">￥299</dd>
+          <dt class="col-xs-7"><strong>总价：</strong></dt>
+          <dd class="col-xs-5"><strong>￥1799</strong></dd>
+        </dl>
       </div>
+<<<<<<< HEAD
       </dd>
     </dl>
 	<dl id="yzys" name="yzys">
     <dt><i class="glyphicon glyphicon-menu-down"></i>椅子颜色</dt>
     <dd>
 		<p class="price">黑色 - ￥0</p>
+=======
+    </div>
+    <!-- 右侧选择定制 -->
+    <div class="section">
+      <dl id="kb">
+        <dt><i class="glyphicon glyphicon-menu-down"></i>靠背及坐垫</dt>
+        <dd>
+          <p class="price"></p>
 
-		<div><h5>PU颜色</h5>
-		<span><i ></i><img src="img/icon/hlps-03.png" title="pu/黑色" data-price="0" /></span>
-		<span><img src="img/icon/hlps-06.png" title="PU/大红色" data-price="0"/></span>
-		<span><img src="img/icon/hlps-07.png" title="PU/海兰色" data-price="0"/></span>
-		<span><img src="img/icon/hlps-08.png" title="pu/纯白" data-price="0"/></span>
-		<span><img src="img/icon/hlps-10.png" title="pu/桔黄色" data-price="0"/></span>
-		<span><img src="img/icon/hlps-22.png" title="pu/亮黄" data-price="0"/></span>
-		<span><img src="img/icon/hlps-30.png" title="pu/淡紫" data-price="0"/></span>
-		</div>
+          <div>
+            <h5>靠背</h5>
+            <span class="data"><i ></i><img src="img/icon/1.png" title="D和I靠背" data-price="0"/></span>
+            <span><img src="img/icon/1.png" title="R-靠背" data-price="100"/></span>
+          </div>
+        </dd>
+        <!-- <dd>
+          <p class="price"></p>
+          <div>
+            <h5>坐垫</h5>
+            <span class="data"><i></i><img src="img/icon/dizd.png" title="D和I坐垫" data-price="0"/></span>
+            <span><img src="img/icon/rzd.png" title="R-坐垫" data-price="100"/></span>
+          </div>
+        </dd> -->
+      </dl>
+      <!-- <dl id="yzys">
+        <dt><i class="glyphicon glyphicon-menu-down"></i>椅子颜色</dt>
+        <dd>
+          <p class="price">黑色 - ￥0</p>
+>>>>>>> 5309a2c975e83a0c78e36ab6fd331d7c1fe6bab8
 
-		<div><h5>PVC颜色</h5>
-		<span><i ></i><img src="img/icon/dnsy-01.png" title="编织纹PVC/黑色/DN01" data-price="0"/></span >
+          <div>
+            <h5>PU颜色</h5>
+            <span class="data"><i ></i><img src="img/icon/hlps-03.png" title="pu/黑色" data-price="0" /></span>
+            <span><img src="img/icon/hlps-06.png" title="PU/大红色" data-price="0"/></span>
+            <span><img src="img/icon/hlps-07.png" title="PU/海兰色" data-price="0"/></span>
+            <span><img src="img/icon/hlps-08.png" title="pu/纯白" data-price="0"/></span>
+            <span><img src="img/icon/hlps-10.png" title="pu/桔黄色" data-price="0"/></span>
+            <span><img src="img/icon/hlps-22.png" title="pu/亮黄" data-price="0"/></span>
+            <span><img src="img/icon/hlps-30.png" title="pu/淡紫" data-price="0"/></span>
+          </div>
+
+          <div>
+            <h5>PVC颜色</h5>
+            <span class="data"><i ></i><img src="img/icon/dnsy-01.png" title="编织纹PVC/黑色/DN01" data-price="0"/></span >
 		<span><img src="img/icon/dnsy-10.png" title="PVC/黑色/DN03" data-price="0" /></span>
-		<span><img src="img/icon/dnsy-12.png" title="打孔PVC/黑色/DN02/（阻燃/环保）" data-price="0"/></span>
-		<span><img src="img/icon/dnsy-13.png"  title="打孔PVC/黑色/DN02" data-price="0"/></span>
-		<span><img src="img/icon/dnsy-14.png" title="条纹皮/英标阻燃"  data-price="0"/></span>
-		<span ><img src="img/icon/dnsy-15.png"  title="PVC/英标阻燃" data-price="0"/></span>
-		<span ><img src="img/icon/dnsy-16.png" title="新PVC/水墨兰/19-4324TPX（户外PVC）" data-price="0"/></span>
-		<span ><img src="img/icon/dnsy-17.png" title="新PVC/黑色（户外PVC）" data-price="0"/></span>
-		<span><img src="img/icon/dnsy-18.png" title="新PVC/海兰色/16-4535TPX（户外PVC）" data-price="0"/ ></span>
-		<span ><img src="img/icon/dnsy-19.png" title="新PVC/纯白（omp)（户外PVC）" data-price="0"/></span>
-		<span ><img src="img/icon/dnsy-20.png" title="新PVC/橘红/1655C（户外PVC）" data-price="0"/></span>
-		<span><img src="img/icon/dnsy-21.png"  title="PVC/纯白" data-price="100"/></span>
-	</div>
-	</dd>
-	</dl>
+            <span><img src="img/icon/dnsy-12.png" title="打孔PVC/黑色/DN02/（阻燃/环保）" data-price="0"/></span>
+            <span><img src="img/icon/dnsy-13.png"  title="打孔PVC/黑色/DN02" data-price="0"/></span>
+            <span><img src="img/icon/dnsy-14.png" title="条纹皮/英标阻燃"  data-price="0"/></span>
+            <span><img src="img/icon/dnsy-15.png"  title="PVC/英标阻燃" data-price="0"/></span>
+            <span><img src="img/icon/dnsy-16.png" title="新PVC/水墨兰/19-4324TPX（户外PVC）" data-price="0"/></span>
+            <span><img src="img/icon/dnsy-17.png" title="新PVC/黑色（户外PVC）" data-price="0"/></span>
+            <span><img src="img/icon/dnsy-18.png" title="新PVC/海兰色/16-4535TPX（户外PVC）" data-price="0"/ ></span>
+            <span><img src="img/icon/dnsy-19.png" title="新PVC/纯白（omp)（户外PVC）" data-price="0"/></span>
+            <span><img src="img/icon/dnsy-20.png" title="新PVC/橘红/1655C（户外PVC）" data-price="0"/></span>
+            <span><img src="img/icon/dnsy-21.png"  title="PVC/纯白" data-price="100"/></span>
+          </div>
+        </dd>
+      </dl> -->
 
+<<<<<<< HEAD
   <dl id="tsfp" name="tsfp">
 		<dt><i class="glyphicon glyphicon-menu-down"></i>扶手及托盘</dt>
     <dd>
@@ -141,17 +212,100 @@
   		<span><img src="img/icon/75lb.png" title="75溜冰轮" data-price="50"/></span>
       <span><img src="img/icon/75lb.png" title="75溜冰轮" data-price="50"/></span>
   		<span><img src="img/icon/75l.png" title="75轮" data-price="50"/></span>
+=======
+      <dl id="tsfp">
+        <dt><i class="glyphicon glyphicon-menu-down"></i>扶手及托盘</dt>
+        <dd>
+          <p class="price">3D扶手 - ￥0</p>
+          <div>
+            <h5>扶手</h5>
+            <span class="data"><i ></i><img src="img/icon/fs.png" title="3D扶手" data-price="0"/></span>
+            <span><img src="img/icon/fs.png" title="4D扶手" data-price="100"/></span>
+          </div>
+        </dd>
+         <dd>
+          <p class="price"></p>
+          <div>
+            <h5>托盘</h5>
+            <span class="data"><i></i><img src="img/icon/5.png" title="蝴蝶托" data-price="0"/></span>
+            <span><img src="img/icon/tqw.png" title="青蛙托"  data-price="100"/></span>
+          </div>
+        </dd> 
+      </dl>
+      <dl id="lzjg">
+        <dt><i class="glyphicon glyphicon-menu-down"></i> 轮子及脚盖</dt>
+        <dd>
+          <p class="price">75溜冰轮 ￥199</p>
+          <div>
+            <h5>轮子</h5>
+            <span><img src="img/icon/6.png" title="50常规轮" data-price="0"/></span>
+            <span><img src="img/icon/50sd.png" title="50锁定轮" data-price="50"/></span>
+            <span><img src="img/icon/75lb.png" title="75溜冰轮" data-price="50"/></span>
+            <span><img src="img/icon/75lb.png" title="75溜冰轮" data-price="50"/></span>
+            <span><img src="img/icon/75l.png" title="75轮" data-price="50"/></span>
+          </div>
+        </dd>
+        <!-- <dd>
+          <p class="price"></p>
+          <div>
+            <h5>脚盖</h5>
+            <span><img src="img/icon/jg.png" title="铝合金五星脚脚盖" data-price="100"/></span>
+            <span><img src="img/icon/jgnl.png" title="尼龙脚脚盖" data-price="0"/></span>
+          </div>
+        </dd> -->
+      </dl>
+>>>>>>> 5309a2c975e83a0c78e36ab6fd331d7c1fe6bab8
     </div>
-</dd>
-<dd>
-    <p class="price"></p>
-    <div><h5>脚盖</h5>
-    <span><img src="img/icon/jg.png" title="铝合金五星脚脚盖" data-price="100"/></span>
-    <span><img src="img/icon/jgnl.png" title="尼龙脚脚盖" data-price="0"/></span>
   </div>
-  	</dd>
-  </dl>
+  <canvas id="canvas" width="300" height="300"></canvas>
+  <div id="imgBox" align="center">
 	</div>
-</div>
-  </body>
- </html>
+  <script>
+    	var  base64 = [];
+      var data = []
+    function hecheng(){
+	draw(function(){
+		$('#imgBox').html('<p style="padding:10px 0">合成图片成功！可以鼠标另存图片查看我是否是一张图片~~！</p><img style="width:300px;" src="'+base64[0]+'">');
+	})	
+}
+    function draw(fn) {
+     
+			var img3 = new Image()
+       data = []
+			img3.setAttribute('crossOrigin', 'Anonymous');
+			img3.src = document.getElementById('canvas').toDataURL("image/png");
+        $(".data").each(function(){
+        var obj = $(this).find("img").attr('src')
+        data.push(obj)
+    })
+			  base64 = [];
+			var c = document.createElement('canvas'),
+				ctx1 = c.getContext('2d'),
+				len = data.length;
+			c.width = 290;
+			c.height = 290;
+			ctx1.rect(0, 0, c.width, c.height);
+			ctx1.fillStyle = '#fff';
+			ctx1.fill();
+			function drawing(n) {
+				if (n < len) {
+					var img = new Image;
+					img.crossOrigin = 'Anonymous'; //解决跨域
+					img.src = data[n];
+					img.onload = function () {
+						ctx1.drawImage(img, 0, 0, 290, 290);
+						drawing(n + 1);//递归
+					}
+				} else {
+					//保存生成作品图片
+					base64.push(c.toDataURL("image/png",0.8));
+					alert(JSON.stringify(base64));
+					fn();
+				}
+			}
+			drawing(0);
+		}
+  </script>
+</body>
+
+</html>

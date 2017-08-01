@@ -1,0 +1,32 @@
+.section{
+    overflow-y: auto;
+}
+.section dd img{
+    width:50px;
+}
+.section #lzjg div span{
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+}
+.section #lzjg div span img{
+    width: 450px;
+    height: 800px;
+    position: absolute;
+    top:-700px;
+}
+.section #lzjg #lz_jg span{
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+.section #lzjg #lz_jg  span img{
+    width: 450px;
+    height: 800px;
+    position: absolute;
+    top:-650px;
+}

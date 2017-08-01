@@ -38,6 +38,7 @@ background: #e01222;
    padding-top: 1.25rem;
    margin-left: 5.5%;
    color: #000;
+   position: fixed;
 }
 .main{
   bottom: 2.5em;
@@ -51,7 +52,7 @@ background: #e01222;
 }
 
 .main .bxslider{
-  height: calc(100vh - 21.5rem);
+  height: calc(100vh - 22.5rem);
   margin-left: auto;
   margin-right: auto;
   max-height: calc(56.25vw - 41.5vw * 0.5625);
@@ -59,8 +60,27 @@ background: #e01222;
   text-align: center;
   width: calc(177.778vh - 23.5rem * 1.77778)
 }
+.wz {
+background: red none repeat scroll 0 0;
+ border-radius: 18px;
+ color: #fff;
+ font-weight: bold;
+ height: 20px;
 
+ position: absolute;
+ text-align: center;
 
+ width: 20px;
+ z-index: 2;
+ }
+ .logo1{
+    left: 49%;
+     top: 22%;
+ }
+  .logo2 {
+    left:49%;
+    top:47%
+  }
 .bxslider li {
   height: 100%;
       max-width: 100%;
@@ -176,3 +196,52 @@ font-weight: normal;
   .section dd>div{
     margin-bottom: 15px;
   }
+/*entey*/
+
+.bg-custom {
+  background: url('../img/b.png')  scroll no-repeat center center;
+  max-height: 100%;
+  max-width: 100%;
+  min-height: 620px;
+  position: relative;
+
+}
+.bg-custom a{
+  bottom: 44px;
+    font-size: 25px;
+    font-weight: bold;
+    left: 50%;
+    margin-left: -545px;
+    position: absolute;
+    text-decoration: underline;
+    color:#034468;
+}
+a.senior{
+margin-left: -370px;
+}
+.w1210 {
+  max-width:1210px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.w1210  a {
+  text-align: center;
+   margin-bottom: 20px;
+}
+.w1210 h5{
+  color: #222;
+    font-size: 20px;
+    margin: 20px 0;
+    text-align: center;
+}
+.w1210  a img{
+  max-width: 520px;
+}
+.p-l-10{
+  padding-left: 10px
+}
+.md-custom .form-control{
+  border: 0 none;
+  box-shadow:none
+
+}

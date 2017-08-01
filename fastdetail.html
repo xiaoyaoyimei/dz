@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/jquery.bxslider.min.css"/>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/c-d.css"/>
+    <script type="text/javascript"  src="js/jquery.min.js"></script>
+    <script type="text/javascript"  src="js/jquery.bxslider.min.js"></script>
+    <title>我的私人定制</title>
+    <script>
+    $(function(){
+      $('.bxslider').bxSlider({
+        mode: 'fade',
+        captions: true
+      });
+      $('.cd-top li').click(function(){
+       $(this).addClass('active').siblings().removeClass('active');
+
+      });
+      $('.section dd span').click(function(){
+        var _s=$(this).parents('dd').find('span');
+        _s.find('i').remove();
+        $(this).append('<i></i>');
+        var _title=$(this).find("img").attr("title")+'-'+'￥'+$(this).find("img").data('price');
+        $(this).parent().prevAll("p").text(_title);
+
+      });
+      $('.section dt i').click(function(){
+        $(this).toggleClass('glyphicon-menu-up');
+        $(this).parent().next().slideToggle();
+      })
+    })
+
+    </script>
+  </head>
+  <body>
+    <div class="page-dz">
+
+  <h1 class="headline">FA01-GN-01</h1>
+</div>
+  <div class="main">
+    <span class="wz logo1">1</span>
+    <span class="wz logo2">2</span>
+    <ul class="bxslider">
+    <li><img src="img/cd-main.png"></li>
+      <li><img src="img/cd-main-X.png"></li>
+        <li><img src="img/cd-main-B.png"></li></ul>
+  <div class="sundry-wrap"><div class="rotate-wrap">
+  <i class="d90"></i><span >|</span><i class="d180"></i></div>
+  <dl class="totle-wrap">
+  <dt class="col-xs-7">基础价格：</dt><dd class="col-xs-5">￥1599</dd>
+  <dt class="col-xs-7">设备价格：</dt><dd class="col-xs-5">￥299</dd>
+<dt class="col-xs-7"><strong>总价：</strong></dt><dd class="col-xs-5"><strong>￥1799</strong></dd></dl>
+</div>
+</div>
+<!-- 右侧选择定制 -->
+	<div class="section">
+    <dl >
+      <dt><i class="glyphicon glyphicon-menu-down"></i>上传位置1的logo</dt>
+      <dd>
+      <div><input type="file"></div>
+
+    </dd>
+
+    </dl>
+    <dl >
+      <dt><i class="glyphicon glyphicon-menu-down"></i>上传位置2的logo</dt>
+      <dd>
+      <div><input type="file"></div>
+    </dd>
+
+    </dl>
+     <button class=" btn btn-info">查看定制椅子</button>
+
+	</div>
+</div>
+  </body>
+ </html>

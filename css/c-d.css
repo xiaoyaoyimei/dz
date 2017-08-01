@@ -114,11 +114,11 @@ background: red none repeat scroll 0 0;
     cursor: pointer;
   }
   .d90{
-    background: url('../img/d90.png') scroll no-repeat 0 0;
+    background: url('images/d90.png') scroll no-repeat 0 0;
 
   }
   .d180{
-    background: url('../img/d180.png') scroll no-repeat 0 0;
+    background: url('images/d180.png') scroll no-repeat 0 0;
   }
   .rotate-wrap span{
     left: 0;
@@ -182,7 +182,7 @@ font-weight: normal;
  }
 
   .section span i{
-      background: url('../img/icon/rightchoose.png') scroll no-repeat 0 0;
+      background: url('images/icon/rightchoose.png') scroll no-repeat 0 0;
       height: 18px;
          position: absolute;
          right: -2px;

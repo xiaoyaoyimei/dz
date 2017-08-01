@@ -12,6 +12,7 @@ a, a:hover, a:focus {
 }
 a:hover {
 	color: #2d2d2d;
+
 }
 .clearfix:after {
 	visibility: hidden;

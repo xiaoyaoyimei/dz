@@ -9,6 +9,20 @@
     <link rel="stylesheet" href="css/index.css"/>
     <script type="text/javascript"  src="js/jquery.min.js"></script>
     <script type="text/javascript"  src="js/bootstrap.min.js"></script>
+      <script>
+    $(function(){
+        var temp;
+      $('.pro-zs a').hover(function(){
+
+        var _src=$(this).find('img').attr('src');
+        temp=_src;
+        _src=_src.substring(0,_src.length-4)+"-b.png";
+         $(this).find('img').attr('src',_src);
+      },function(){
+        $(this).find('img').attr('src',temp);
+      })
+    })
+          </script>
     <title>首页</title>
   </head>
   <body>
@@ -17,19 +31,24 @@
   <ul class="dz-ad"><li><a href="#"><img src="images/banner.jpg"></a> </li></ul>
   <div class="content">
   <h5>  <span>定制流程及成功案例</span><hr/></h5>
-<div class="w1210">
-   <img src="images/dz-process.png" ></div>
+<div class="al-wrap">
+  <img src="images/dz-process.png" >
    <ul class="pro-zs clearfix">
-     <li class="one"><a href="" ><img src="images/pro-one.png"></a></li>
-     <li><a href="" ><img src="images/pro-two.png"></a><a href="" ><img src="images/pro-three.png"></a><a href="" ><img src="images/pro-two-2.png"></a></li>
-     <li><a href="" ><img src="images/pro-three-1.png"></a><a href="" ><img src="images/pro-center.png"></a><a href="" ><img src="images/pro-three-3.png"></a></li>
-     <li><a href="" ><img src="images/pro-two-1.png"></a><a href="" ><img src="images/pro-three-2.png"></a><a href="" ><img src="images/pro-two-3.png"></a></li>
-   <li><a href="" ><img src="images/pro-one-1.png"></a></li>
+     <li ><a href="" ><img src="images/pro-cg.png"></a><a href="" ><img src="images/pro-xone.png"></a>
+     <a href="" ><img src="images/pro-xone-1.png"></a>
+   <a href="" ><img src="images/pro-xone-2.png"></a>
+ <a href="" ><img src="images/pro-xone-3.png"></a></li>
+ <li >   <a href="" ><img src="images/pro-xone-4.png" class="pt25"></a>
+  <a href="" ><img src="images/pro-xone-5.png"></a>
+  <a href="" class="w595"><img src="images/pro-xone-7.png"></a>
+<a href="" ><img src="images/pro-xone-6.png"></a></li></li>
  </ul>
+ </div>
+
        <h5>  <span>所见及所得</span><hr/></h5>
 
        <div class="video-wrap">
-         <video width="900" height="500" controls="controls" >
+         <video width="1920" height="500" controls="controls" >
             <source src="images/dz.mp4" type="video/mp4" />
             </video></div>
               <h5>  <span>请选择款式</span><hr/></h5>
@@ -44,6 +63,6 @@
             <button class="btn btn-black btn-lg">WOLVES</button></a></li></ul>
       </div>
 <div class="text-center"><button class="btn btn-red btn-msdz btn-lg ">马上定制</button></div>
-     </div>
+
   </body>
  </html>

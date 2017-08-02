@@ -1,0 +1,48 @@
+
+.bg-custom {
+  background: url('../img/b.png')  scroll no-repeat center center;
+  max-height: 100%;
+  max-width: 100%;
+  min-height: 620px;
+  position: relative;
+
+}
+.bg-custom a{
+  bottom: 44px;
+    font-size: 25px;
+    font-weight: bold;
+    left: 50%;
+    margin-left: -545px;
+    position: absolute;
+    text-decoration: underline;
+    color:#034468;
+}
+a.senior{
+margin-left: -370px;
+}
+.w1210 {
+  max-width:1210px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.w1210  a {
+  text-align: center;
+   margin-bottom: 20px;
+}
+.w1210 h5{
+  color: #222;
+    font-size: 20px;
+    margin: 20px 0;
+    text-align: center;
+}
+.w1210  a img{
+  max-width: 520px;
+}
+.p-l-10{
+  padding-left: 10px
+}
+.md-custom .form-control{
+  border: 0 none;
+  box-shadow:none
+
+}

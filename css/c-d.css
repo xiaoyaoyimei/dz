@@ -219,11 +219,13 @@ font-weight: normal;
 a.senior{
 margin-left: -370px;
 }
+
 .w1210 {
-  max-width:1210px;
+  max-width:1200px;
   margin-left:auto;
   margin-right:auto;
 }
+
 .w1210  a {
   text-align: center;
    margin-bottom: 20px;
@@ -244,4 +246,12 @@ margin-left: -370px;
   border: 0 none;
   box-shadow:none
 
+}
+.btn-black{
+  background: #000;
+  color:#fff;
+  border-radius: 0;
+}
+.btn-black:hover,.btn-red:hover{
+    color:#fff;
 }

@@ -1,0 +1,156 @@
+#list{
+
+    max-width: 1200px;
+    margin: 0px auto;
+}  
+
+#list h3{
+    padding: 15px 0;
+    color: black;
+    font-size: 20px
+}
+#list>div{
+    width:100%;
+    border-top:1px solid #ddd;
+      display: none;
+      padding: 10px 0;
+      border-bottom:1px solid #ddd;
+}
+#list ul{
+    width:50%;
+    float: left;
+}
+#Z_K{
+    cursor: pointer;
+    font-size: 18px;
+    margin-right: 5px;
+}
+#list ul div{
+    width:20px;
+    height: 20px;
+    border: 1px solid #ddd;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    line-height: 30px;
+    top: 5px;
+    margin-right: 5px;
+}
+#list ul li{
+    list-style: none;
+    float: left;
+    width: 50%;
+    font-size: 14px;
+    line-height: 30px;
+    color: #222;
+}
+#list ul div i{
+      background: url('../images/rightchoose_r.png') scroll no-repeat 0 0;
+      height: 18px;
+         position: absolute;
+         right: 0px;
+         top: 0px;
+         background-size: 100% 100%;
+         width: 18px;
+  }
+#list button{
+      border: 1px solid black;
+      padding: 8px 21px;
+      background-color: #222;
+      color:white;
+      float: right;
+      border-radius: 5px;
+}
+#list button:hover{
+       background-color: #b00;
+        border: 1px solid #b00;
+}
+.list{
+        width: 65%;
+        max-width: 1200px;
+        margin: 0 auto;
+}
+    .list h5{
+        position: relative;
+        text-align: center;
+    }
+.list h5 span:before, .list h5 span:after{
+   content: '';                 /*CSS伪类用法*/
+    position: absolute;         /*定位背景横线的位置*/
+    bottom:11px;
+     background: #ddd;       /*宽和高做出来的背景横线*/
+    width: calc(50% - 200px);
+   height: 1px;
+}
+.list span:before{
+        left: 0px;
+}
+.list span:after{
+    right: 0px;
+}
+.list ul{
+        overflow: hidden;
+        padding: 0px;
+        padding-top: 10px;
+        text-align: center;
+}
+.list ul li{
+       border-color: transparent;
+    border-style: solid;
+    border-width: 1px 1px 2px;
+    box-sizing: border-box;
+    cursor: pointer;
+    float: left;
+    list-style: outside none none;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    position: relative;
+    text-align: center;
+    width: 33%;
+        
+}
+.list ul li:hover, .list a:hover{
+    border-color:#ddd #ddd #000;
+        color:#b00;
+        text-decoration: none;
+} 
+.list ul li .w_color{
+        color:black;
+}
+.list ul li img{
+        width: 30%;
+}
+    .list p{
+        height: 25px;
+        line-height: 25px;
+    }
+.list h5{
+    height: 30px;
+    line-height: 30px;
+    font-size: 20px;
+    color: black;
+    margin: 20px 0;
+}
+.list a{
+    color: black;
+}
+.list button{
+    padding: 8px 21px;
+    border-radius: 5px;
+    border: 0 none;
+}
+.list button:hover{
+    color: #b00;
+}
+.list a:active{
+    text-align: none;
+}
+.quick{
+    background-color: black;
+    color: white!important;
+    margin-right: 20px;
+}
+.best{
+    background-color: #b00;
+    color: white!important;
+}

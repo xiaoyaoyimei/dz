@@ -1,0 +1,370 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/jquery.bxslider.min.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/c-d.css" />
+  <link rel="stylesheet" href="css/detail.css">
+  <link rel="stylesheet"  href="css/bootstrapValidator.min.css">
+  <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js" ></script>
+  <script type="text/javascript" src="js/bootstrapValidator.min.js" ></script>
+  <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+  <title>我的私人定制</title>
+  <style>
+
+  </style>
+  <script>
+    $(function () {    
+      $('.section dd span').click(function () {
+        var _s = $(this).parents('dd').find('span');
+        _s.removeClass("data").find('i').remove();
+        $(this).addClass("data").append('<i></i>');
+        var _title = $(this).find("img").attr("title") + '-' + '￥'
+          + $(this).find("img").data('price');
+        $(this).parent().prevAll("p").text(_title);
+        hecheng();
+      });
+      $('.section dt i').click(function () {
+        $(this).toggleClass('glyphicon-menu-up');
+        $(this).parent().next().slideToggle();
+      })
+      $('#orderform').bootstrapValidator({
+		message: 'This value is not valid',
+		feedbackIcons: {
+			valid: 'glyphicon glyphicon-ok',
+			invalid: 'glyphicon glyphicon-remove',
+			validating: 'glyphicon glyphicon-refresh'
+		},
+		fields: {
+			orderNo: {
+				message: '省份不能为空',
+				validators: {
+					notEmpty: {
+						message: '省份不能为空'
+					},
+				}
+			},
+			series: {
+				message: '城市不能为空',
+				validators: {
+					notEmpty: {
+						message: '城市不能为空'
+					},
+				}
+			},
+			img: {
+				message: '地区验证失败',
+				validators: {
+					notEmpty: {
+						message: '地区不能为空'
+					},
+				}
+			},
+			price: {
+				message: '详细地址验证失败',
+				validators: {
+					notEmpty: {
+						message: '详细地址不能为空'
+					},
+				}
+			},
+			bcSku: {
+				message: '联系人电话验证失败',
+				validators: {
+					notEmpty: {
+						message: '联系人电话不能为空'
+					},
+				}
+			},
+			traySku: {
+				message: '联系人姓名验证失败',
+				validators: {
+					notEmpty: {
+						message: '联系人姓名不能为空'
+					},
+				}
+			}
+			}
+		}).on('success.form.bv', function(e) {
+			// Prevent form submission
+			e.preventDefault();
+			// Get the form instance
+			var $form = $(e.target);
+			// Get the BootstrapValidator instance
+			var bv = $form.data('bootstrapValidator');
+			// Use Ajax to submit form data
+
+
+	$.post("",$("#orderform").serialize(),function (data, status) {
+		if(data.code == 'success'){
+			$("#closeModal").click();
+			$("#table").bootstrapTable("refresh");
+		}else{
+			alert(data.message);
+		}
+	},'json');
+    })})
+  </script>
+</head>
+
+<body>
+  <div class="page-dz">
+    <div class="top-wrap">
+      <div class="cd-top">
+        <ul>
+          <li class="active">
+            <a href="list.html">椅型</a></li>
+          <li><a href="#kb">1.靠背及坐垫</a></li>
+          <li><a href="#yzys">2.椅子颜色</a></li>
+          <li><a href="#tsfp">3.扶手及托盘</a></li>
+          <li>
+            <a href="#lzjg">4.轮子及脚盖</a></li>
+        </ul>
+      </div>
+      <h1 class="headline">FA01-GN-01</h1>
+    </div>
+  </div>
+  <div class="main">
+    <canvas id="canvas" width="300" height="300" style="display:none"></canvas>
+    <div id="imgBox" align="center">
+    </div>
+    <div class="sundry-wrap">
+      <div class="rotate-wrap">
+        <!-- <i class="d90"></i><span>|</span><i class="d180"></i></div> -->
+        <span class="text-danger">请确定好您的款式，提交之后不能修改</span>
+      </div>
+      <dl class="totle-wrap">
+        <dt class="col-xs-7">基础价格：</dt>
+        <dd class="col-xs-5">￥1599</dd>
+        <dt class="col-xs-7">设备价格：</dt>
+        <dd class="col-xs-5">￥299</dd>
+        <dt class="col-xs-7"><strong>总价：</strong></dt>
+        <dd class="col-xs-5"><strong>￥1799</strong></dd>
+      </dl>
+    </div>
+  </div>
+  <!-- 右侧选择定制 -->
+  <div class="section">
+    <dl id="kb">
+      <dt>靠背及坐垫</dt>
+      <dd>
+        <p class="price"></p>
+
+        <div>
+          <h5>靠背</h5>
+          <span><img src="images/icon/zs-o.png" title="R-靠背" data-price="100"/></span>
+          <span><img src="images/icon/zs-w.png" title="R-靠背" data-price="100"/></span>
+        </div>
+      </dd>
+    </dl>
+    <dl id="tsfp">
+      <dt>扶手及托盘</dt>
+      <dd>
+        <p class="price">3D扶手 - ￥0</p>
+        <div>
+          <h5>扶手</h5>
+          <span><img src="images/icon/fs.png" title="3D扶手" data-price="0"/></span>
+          <span><img src="images/icon/fs.png" title="4D扶手" data-price="100"/></span>
+        </div>
+      </dd>
+      <div>
+					<h5>坐垫</h5>
+					<span ><img src="" /></span> 
+				</div>
+      <dd>
+        <p class="price"></p>
+        <div>
+          <h5>托盘</h5>
+          <span><img src="images/icon/wxj.png" title="蝴蝶托" data-price="0"/></span>
+        </div>
+      </dd>
+      
+    </dl>
+    <dl id="lzjg">
+      <dt>轮子及脚盖</dt>
+      <dd>
+        <p class="price">75溜冰轮 ￥199</p>
+        <div>
+          <h5>轮子</h5>
+          <span><img src="images/icon/6.png" title="50常规轮" data-price="0"/></span>
+          <span><img src="images/icon/50sdl.png" title="50锁定轮" data-price="50"/></span>
+          <span><img src="images/icon/lbl.png" title="溜冰轮" data-price="50"/></span>
+          <span><img src="images/icon/75l.png" title="75轮" data-price="50"/></span>
+        </div>
+      </dd>
+      <div>
+					<h5>五星脚</h5>
+					<span ><img src=""
+						title="D和I靠背" /></span> 
+				</div>
+      <dd>
+        <p class="price"></p>
+        <div id="lz_jg">
+          <h5>脚盖</h5>
+          <span><img src="images/icon/jg-b.png" title="铝合金五星脚脚盖" data-price="100"/></span>
+          <span><img src="images/icon/jg-blue.png" title="尼龙脚脚盖" data-price="0"/></span>
+          <span><img src="images/icon/jg-g.png" title="铝合金五星脚脚盖" data-price="100"/></span>
+          <span><img src="images/icon/jg-o.png" title="尼龙脚脚盖" data-price="0"/></span>
+          <span><img src="images/icon/jg-r.png" title="铝合金五星脚脚盖" data-price="100"/></span>
+          <span><img src="images/icon/jg-w.png" title="尼龙脚脚盖" data-price="0"/></span>
+          <span><img src="images/icon/jg-y.png" title="尼龙脚脚盖" data-price="0"/></span>
+        </div>
+      </dd>
+    </dl>
+		<dl id="kb">
+			<dd>
+				<div>
+					<h5>椅套</h5>
+					<span ><img src=""
+						title="D和I靠背" /></span> 
+				</div>
+			</dd>
+			<dd>
+				<div>
+					<h5>材质</h5>
+					<span ><img src="" /></span> 
+				</div>
+			</dd>
+		</dl>
+		<dl id="kb">
+			<dd>
+				<div>
+					<h5>logo位置</h5>
+					<span ><img src="" title="D和I靠背" /></span>
+				</div>
+			</dd>
+			<dd>
+				<div>
+					<h5>logo类型</h5>
+					<span ><img src="" /></span>
+				</div>
+				<div>
+					<h5>logo字体</h5>
+					<span ><img src="" /></span> 
+				</div>
+			</dd>
+		</dl>
+	</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="orderModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+			<h4 class="modal-title" id="myModalLabel">
+				填写地址
+			</h4>
+		</div>
+ 		<form class="panel-body form-horizontal" id="orderform" autocomplete="off">
+ 	<div class="modal-body">
+     <div class="form-group">
+						<label class="col-md-3 control-label" for="traySku">联系人姓名</label>
+					<div class="col-md-6">
+					<input id="traySku" class="form-control"   type="text" name="traySku">
+					</div>
+				</div>
+				<div class="form-group">
+						<label class="col-md-3 control-label" for="orderNo">省份</label>
+					<div class="col-md-6">
+					<input id="orderNo" class="form-control"   type="text" name="orderNo">
+					</div>
+				</div>
+				<div class="form-group">
+						<label class="col-md-3 control-label" for="series">城市</label>
+					<div class="col-md-6">
+					<input id="series" class="form-control"   type="text" name="series">
+					</div>
+				</div>
+				<div class="form-group">
+						<label class="col-md-3 control-label" for="img">地区</label>
+					<div class="col-md-6">
+					<input id="img" class="form-control"   type="text" name="img">
+					</div>
+				</div>
+				<div class="form-group">
+						<label class="col-md-3 control-label" for="price">详细地址</label>
+					<div class="col-md-6">
+					<input id="price" class="form-control"   type="text" name="price">
+					</div>
+				</div>
+				<div class="form-group">
+						<label class="col-md-3 control-label" for="bcSku">联系电话</label>
+					<div class="col-md-6">
+					<input id="bcSku" class="form-control"   type="text" name="bcSku">
+					</div>
+				</div>
+				
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-default" data-dismiss="modal" id="closeModal">关闭
+			</button>
+		<button type="submit" style="background-color:black;color:#fff" class="btn " id="saveOrder">
+      提交
+		</button>
+		</div>
+			</form>
+		</div><!-- /.modal-content -->
+		</div><!-- /.modal -->
+	</div>
+
+  <script>
+    var base64 = [];
+    var data = []
+    function hecheng() {
+      draw(function () {
+        $('#imgBox').html(
+          '<img style="width:280px;height:420px;" src="' + base64[0] + '"><br> <button id="button" style="background-color:#222;color:white;display:block;width:400px;height:50px;line-height:50px;margin:10px auto;border-radius:10px;font-size:16px;">确认</button>');
+      })
+    }
+    function draw(fn) {
+      var img3 = new Image();
+      data = [];
+      img3.setAttribute('crossOrigin', 'anonymous');
+      img3.src = document.getElementById('canvas').toDataURL("image/png");
+      $(".data").each(function () {
+        var obj = $(this).find("img").attr('src');
+        data.push(obj);
+      })
+      base64 = [];
+      var c = document.createElement('canvas'), ctx1 = c.getContext('2d'), len = data.length;
+      c.width = 280;
+      c.height = 420;
+      ctx1.rect(0, 0, c.width, c.height);
+      ctx1.fillStyle = '#fff';
+      ctx1.fill();
+      function drawing(n) {
+        if (n < len) {
+          var img = new Image;
+          img.crossOrigin = 'anonymous'; //解决跨域
+          img.src = data[n];
+          img.onload = function () {
+            ctx1.drawImage(img, 0, 0, 280, 420);
+            drawing(n + 1);//递归
+          }
+        } else {
+          //保存生成作品图片
+          base64.push(c.toDataURL("image/png", 0.8));
+          fn();
+        }
+      }
+      drawing(0);
+    }
+$("body").on("click","#button",function(){
+  $("#orderNo").val("");
+  $("#series").val("");
+  $("#img").val("");
+  $("#price").val("");
+  $("#bcSku").val("");
+  $("#traySku").val("");
+  $("#myModal").modal("show");
+})
+  </script>
+</body>
+
+</html>

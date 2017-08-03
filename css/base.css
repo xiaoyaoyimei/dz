@@ -1,0 +1,74 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+	box-sizing: border-box;
+}
+*::before, *::after {
+ box-sizing: border-box;
+}
+a, a:hover, a:focus {
+	outline: 0 none;
+	text-decoration: none;
+}
+a:hover {
+	color: #2d2d2d;
+}
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+.clearfix {
+ *zoom: 1;
+ 
+}
+body {
+	color: #666;
+	font: 12px/150% Arial, Verdana, "microsoft yahei", "宋体";
+}
+a {
+	color: #666;
+	text-decoration: none;
+}
+a, address, b, big, blockquote, body, center, cite, code, dd, del, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, label, legend, li, ol, p, pre, small, span, strong, u, ul, var {
+	margin: 0;
+	padding: 0;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+	display: block;
+}
+hr {
+	box-sizing: content-box;
+	height: 0;
+}
+button, html input[type="button"], input[type="submit"] {
+	cursor: pointer;
+}
+button[disabled], html input[disabled] {
+	cursor: default;
+}
+ol, ul, li {
+	list-style: outside none none;
+}
+img {
+	border: 0 none;
+	vertical-align: middle;
+}
+em, i, u {
+	font-style: normal;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+.pr {
+	position: relative;
+}
+.pa {
+	position: absolute;
+}

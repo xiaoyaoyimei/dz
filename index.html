@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/index.css" />
   <link rel="stylesheet" href="css/detail.css">
   <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <title>首页</title>
 </head>
@@ -18,8 +19,13 @@
   <div class="dz-top">
     <div class="w1210"><a href="index.html"><img src="images/dz-logo.png"/></a><button class="icon-senior fr"></button></div>
   </div>
+  <ul id="bxslider" style="width:100%;">
+            <li><img src="images/banner.png">
+            </li>
+            <li><img src="images/banner2.jpg" width="100%"/>
+            </li>
+        </ul>
   <ul class="dz-ad">
-    <li><a href="#"><img src="images/banner.png"></a> </li>
     <li><a href="#"><img src="images/DZ3.png"></a> </li>
   </ul>
   <div class="content">
@@ -222,24 +228,25 @@
             $(this).find(".btn-gray").addClass('hover');
           })
         })
+        $("#bxslider").bxSlider({auto:true,autoControls:false,caption:false,controls:false,pager:false,});
         $(".fr").click(function () {
           $("#myModall").modal("show");
         })
         $(".dz-choose-wrap .btn-gray").each(function () {
           $(this).click(function () {
             $("#myModal").modal("show");
-            var that = $(this)
+            var that = $(this);
             $("#id").val(function () {
-              return that.attr('data-id')
+              return that.attr('data-id');
             })
           })
         })
       })
       $(".save1").click(function(){
-        window.location.href='fastdetail.html'
+        window.location.href='fastdetail.html';
       })
        $(".save2").click(function(){
-        window.location.href='detail.html'
+        window.location.href='detail.html';
       })
     </script>
 

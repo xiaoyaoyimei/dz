@@ -16,10 +16,10 @@ height: 120px;
   border: 0 none;
 }
 .icon-senior{
-  background:url('../images/icon-senior.png') scroll no-repeat 0 0;
+  background:url('../images/btn1.png') scroll no-repeat 0 0;
 }
-.icon-fast{
-  background: url('../images/icon-fast.png')  scroll no-repeat 0 0;
+.icon-senior:hover{
+  background: url('../images/btn1-red.png')  scroll no-repeat 0 0;
   margin-left: 20px;
 }
 .content {

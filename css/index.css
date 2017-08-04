@@ -1,3 +1,6 @@
+body{
+ font-family: 'Microsoft YaHei' ! important; 
+}
 .dz-top {
 background: #fafafa;
 height: 120px;
@@ -56,15 +59,22 @@ background: #fff none repeat scroll 0 0;
 .dz-choose-wrap{
   display: flex;
     justify-content: center;
+    margin-top: 90px;
 }
+  .dz-choose-wrap ul{
+    width: 65%;
+  }
 .dz-choose-wrap li{
   text-align: center;
 }
 .dz-choose-wrap hr{
   border: 0 none;
-  background:url('../images/hr-fg.png') scroll no-repeat 0 0;
+  background-color: rgb(115,115,115);
   height: 10px;
   width:350px;
+}
+.dz-choose-wrap hr.hover{
+  background-color: rgb(228, 28, 21);
 }
 .btn-red{
   background: #d00;
@@ -80,15 +90,47 @@ background: #fff none repeat scroll 0 0;
   max-width: 100%;
 }
 .al-wrap{
-  display: flex;
-  align-items: center;
-    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    top: 20px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    height: 300px;
 }
-  .al-wrap ul{
-        display: flex;
-    align-items: center;
-    flex-direction: column;
+  .al-wrap li{
+        float: left;
+        width: 11%;
+        margin-top:40px;
+        text-align: center;
+        font-size: 16px;
+
   }
+      .al-wrap li div{
+        line-height: 120px;
+        margin: 0 auto;
+        width: 120px;
+        height: 120px;
+      }
+.al-wrap li .div{
+  background-color: rgb(3, 6, 25);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  line-height: 120px;
+}
+.al-wrap li .div:hover{
+   background-color: rgb(224, 28, 21);
+}
+      .al-wrap li img{
+        text-align: center;
+        vertical-align: center;
+        line-height: 120px;
+      }
+      .al-wrap li .div:hover{
+        transform: rotate(360deg);
+        transition: 0.5s;
+      }
 .pro-zs li a{
 
    border: 1px solid #ddd;
@@ -117,4 +159,11 @@ display: inline-block;
 .al-wrap>img{
   margin-top:10px;
   margin-bottom: 40px;
+}
+.gray{
+  background-color: rgb(217, 215, 215);
+  padding: 0px 15px 15px 15px;
+}
+.gray span{
+  background-color: rgb(217, 215, 215)!important;
 }

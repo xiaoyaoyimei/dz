@@ -12,6 +12,10 @@ a, a:hover, a:focus {
 }
 a:hover {
 	color: #2d2d2d;
+<<<<<<< HEAD
+=======
+
+>>>>>>> e826b9ac6cc18fb3568905d51367be242fd4d885
 }
 .clearfix:after {
 	visibility: hidden;
@@ -23,7 +27,10 @@ a:hover {
 }
 .clearfix {
  *zoom: 1;
+<<<<<<< HEAD
  
+=======
+>>>>>>> e826b9ac6cc18fb3568905d51367be242fd4d885
 }
 body {
 	color: #666;

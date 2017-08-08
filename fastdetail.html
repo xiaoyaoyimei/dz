@@ -8,22 +8,17 @@
   <link rel="stylesheet" href="css/jquery.bxslider.min.css" />
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/c-d.css" />
-   <link rel="stylesheet" href="css/detail.css">
-    <link rel="stylesheet"  href="css/bootstrapValidator.min.css">
+  <link rel="stylesheet" href="css/detail.css">
+  <link rel="stylesheet" href="css/bootstrapValidator.min.css">
   <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.min.js" ></script>
-  <script type="text/javascript" src="js/bootstrapValidator.min.js" ></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/bootstrapValidator.min.js"></script>
   <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
   <title>我的私人定制</title>
   <script>
     $(function () {
-      $('.bxslider').bxSlider({
-        mode: 'fade',
-        captions: true
-      });
       $('.cd-top li').click(function () {
         $(this).addClass('active').siblings().removeClass('active');
-
       });
       $('.section dd span').click(function () {
         var _s = $(this).parents('dd').find('span');
@@ -47,54 +42,83 @@
         $("#myModal").modal("show");
       })
 
-    })
+      $("body").on("change", "input[type='file']", function () {
+        var filePath = $(this).val();
+        if (filePath.indexOf("jpg") != -1 || filePath.indexOf("png") != -1) {
+          var arr = filePath.split('\\');
+          var fileName = arr[arr.length - 1];
+          $(this).parents(".div-file").find('button').css("display", "none");
+          $(this).parents(".div-file").find('img').attr("src", window.URL.createObjectURL(this.files[0])).css("display", "block");
+        } else {
+          return false;
+        }
+      });
+      $(".fh").click(function () {
+        window.location.href = "index.html";
+      });
+      $(".gj").click(function () {
+        window.location.href = "detail.html";
+      });
+      $(".section ol li").each(function () {
+        console.log($(this).index())
+        $(this).find("img").click(function () {
+          $(".section ol li img").css("border", "1px solid rgb(51,51,51)");
+          $(this).css({
+            "border": "1px solid rgb(224,28,21)"
+          });
+          var that = $(this).attr('data-src')
+          $(".bxslider li img").attr('src', that)
+        });
+      });
+    });
   </script>
 </head>
 
 <body>
   <div class="page-dz">
-
-    <h1 class="headline">FA01-GN-01</h1>
+    <img src="images/quick.png" alt="">
   </div>
-  <div class="main">
-    <span class="wz logo1">1</span>
-    <span class="wz logo2">2</span>
-    <ul class="bxslider">
-      <li><img src="img/cd-main.png"></li>
-      <!-- <li><img src="img/cd-main-X.png"></li>
-        <li><img src="img/cd-main-B.png"></li></ul> -->
-      <div class="sundry-wrap">
-        <div class="rotate-wrap">
-          <i class="d90"></i><span>|</span><i class="d180"></i></div>
-        <dl class="totle-wrap">
-          <dt class="col-xs-7">基础价格：</dt>
-          <dd class="col-xs-5">￥1599</dd>
-          <dt class="col-xs-7">设备价格：</dt>
-          <dd class="col-xs-5">￥299</dd>
-          <dt class="col-xs-7"><strong>总价：</strong></dt>
-          <dd class="col-xs-5"><strong>￥1799</strong></dd>
-        </dl>
+  <h1>Wolves</h1>
+  <hr>
+  <div id="body">
+    <div class="main">
+      <!-- <span class="wz logo1">1</span>
+    <span class="wz logo2">2</span> -->
+      <ul class="bxslider">
+        <!-- <li><img src="images/cd-main.png"></li> -->
+        <li><img src="images/l2.png"></li>
+        <!-- <li><img src="img/cd-main-B.png"></li>  -->
+      </ul>
+    </div>
+    <!-- 右侧选择定制 -->
+    <div class="section">
+      <ol>
+        <li><img src="images/x1.png" data-src='images/cd-main-B.png' alt=""></li>
+        <li><img src="images/x2.png" data-src='images/cd-main-X.png' alt=""></li>
+        <li><img src="images/x3.png" data-src='images/cd-main.png' alt=""></li>
+        <li><img src="images/x4.png" data-src='images/dz-pro-1.png' alt=""></li>
+      </ol>
+      <dl>
+        <dt><i class="glyphicon glyphicon-menu-down"></i>上传位置A的logo</dt>
+        <dd>
+          <div class="div-file"><input class="file" type="file"><button class="sc">上传文件</button><img src="" alt=""></div>
+
+        </dd>
+
+      </dl>
+      <dl>
+        <dt><i class="glyphicon glyphicon-menu-down"></i>上传位置B的logo</dt>
+        <dd>
+          <div class="div-file"><input class="file" type="file"><button class="sc">上传文件</button><img src="" alt=""></div>
+        </dd>
+
+      </dl>
+      <button class="button btn btn_red">查看您的定制</button>
+      <button id="qr" class="button btn btn-black">提交您的定制</button>
+      <div id="f_g">
+        <button class="button  fh btn btn_bg_gray">返回首页</button><button class="button btn gj  btn_bg_black">高级定制</button>
       </div>
-  </div>
-  <!-- 右侧选择定制 -->
-  <div class="section">
-    <dl>
-      <dt><i class="glyphicon glyphicon-menu-down"></i>上传位置1的logo</dt>
-      <dd>
-        <div><input type="file"></div>
-
-      </dd>
-
-    </dl>
-    <dl>
-      <dt><i class="glyphicon glyphicon-menu-down"></i>上传位置2的logo</dt>
-      <dd>
-        <div><input type="file"></div>
-      </dd>
-
-    </dl>
-    <button class=" btn btn-black">查看定制椅子</button>
-    <button id="qr" class=" btn btn-black">确认</button>
+    </div>
   </div>
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="orderModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -145,14 +169,10 @@
                 <input id="bcSku" class="form-control" type="text" name="bcSku">
               </div>
             </div>
-
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal" id="closeModal">关闭
-			</button>
-            <button type="submit" style="background-color:black;color:#fff" class="btn " id="saveOrder">
-      提交
-		</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal" id="closeModal">关闭</button>
+            <button type="submit" style="background-color:black;color:#fff" class="btn " id="saveOrder">提交</button>
           </div>
         </form>
       </div>
@@ -160,8 +180,6 @@
     </div>
     <!-- /.modal -->
   </div>
-
-
 </body>
 
 </html>

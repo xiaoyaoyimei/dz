@@ -1,7 +1,7 @@
 .section{
     overflow-y: auto;
 }
-.section dd img{
+ .section dd span img{
     width:50px;
 }
 .section #lzjg div span{
@@ -11,12 +11,12 @@
     height: 70px;
     overflow: hidden;
 }
-.section #lzjg div span img{
+/* .section #lzjg div span img{
     width: 450px;
     height: 800px;
     position: absolute;
     top:-700px;
-}
+} */
 .section #lzjg #lz_jg span{
     position: relative;
     display: inline-block;

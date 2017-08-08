@@ -12,6 +12,9 @@
 .cd-top {
     box-shadow: 0 5px 20px -8px #4e4e4e;
 }
+  .page-dz img{
+    width: 100%;
+  }
   h5 span{
     border-bottom:  1px solid rgb(224, 28, 21);
     padding-bottom: 10px;
@@ -21,6 +24,27 @@
 .cd-top ul {
     display: flex;
     margin: 0 5.5%;
+}
+#section{
+  height: 700px;
+}
+#section main{
+  margin-bottom: 15px;
+}
+.section ol{
+    overflow: hidden;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgb(217,217,217);
+}
+.section ol li{
+  float: left;
+  width: 25%;
+}
+.section .dt{
+  border:  0px;
+}
+.section ol li img{
+  width: 90%;
 }
 .cd-top li {
     cursor: pointer;
@@ -48,15 +72,30 @@
    color: #000;
    position: fixed;
 }
+  h1{
+    padding:20px 0px 10px 15px;
+
+  }
+  h1 span{
+    font-size: 14px;
+  }
+#body{
+  overflow: hidden;
+}  
+  #body>div{
+    float: left;
+  }
+  #body .main{
+    width: 60%;
+  }
+   #body #section{
+    width: 39%;
+    box-sizing: border-box;
+  }
 .main{
-  bottom: 2.5em;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  left: 5.5%;
-  position: fixed;
-  top: 11.125rem;
-  width: 59%;
 }
 
 .main .bxslider{
@@ -74,10 +113,8 @@ background: red none repeat scroll 0 0;
  color: #fff;
  font-weight: bold;
  height: 20px;
-
  position: absolute;
  text-align: center;
-
  width: 20px;
  z-index: 2;
  }
@@ -90,7 +127,7 @@ background: red none repeat scroll 0 0;
     top:47%
   }
 .bxslider li {
-  height: 100%;
+      height: 100%;
       max-width: 100%;
       display: flex;
       justify-content: center;
@@ -110,7 +147,6 @@ background: red none repeat scroll 0 0;
    display: inline-block;
     float: left;
     padding-bottom: 0.6em;
-
     position: absolute;
     z-index: 10;
   }
@@ -143,7 +179,6 @@ background: red none repeat scroll 0 0;
     font-size: 14px;
     width:300px;
   }
-
   .totle-wrap dt{
 font-weight: normal;
  text-align: left;
@@ -157,39 +192,39 @@ font-weight: normal;
     }
   .section{
       box-sizing: border-box;
-       margin-left: 65.5%;
        overflow: hidden;
-       padding-top: 10.125rem;
        position: relative;
        width: 29%;
+        width: 29%;
+        display: inline-block;
+        left: 20px;
      }
-     .section dt i{
+.section dt i{
        cursor: pointer;
-float: right;
-position: relative;
-top: 10px;
+      float: right;
+      position: relative;
+      top: 19px;
 }
-   .section dt{
+.section dt{
      font-size: 16px;
-height: 42px;
-line-height: 42px;
-border-bottom: 1px solid #ddd;
-font-weight: normal;
-   }
+      height: 60px;
+      line-height: 60px;
+      border-top: 1px solid #ddd;
+      font-weight: normal;
+}
 
- .section .price{
+.section .price{
    font-weight: bold;
    margin-top:25px;
    margin-bottom: 25px;
    color:#333;
  }
-  .section dd span{
+.section dd span{
    position: relative;
    display: inline-block;
    cursor: pointer;
  }
-
-  .section span i{
+.section span i{
       background: url('images/icon/rightchoose.png') scroll no-repeat 0 0;
       height: 18px;
          position: absolute;
@@ -197,15 +232,13 @@ font-weight: normal;
          top: 21px;
          width: 18px;
   }
-    .section h5{
+.section h5{
       margin-bottom: 5px;
-
-    }
-  .section dd>div{
-    margin-bottom: 15px;
-  }
-/*entey*/
-
+}
+.section dd>div{
+    height: 50px;
+    border-bottom: 1px solid rgb(217,217,217);
+}
 .bg-custom {
   background: url('../img/b.png')  scroll no-repeat center center;
   max-height: 100%;
@@ -271,9 +304,65 @@ margin-left: -370px;
   border: 2px solid rgb(3,6,25);
   border-radius: 5px;
 }
+.btn_red{
+  background-color:rgb(224,28,21); 
+  color:#fff;
+  border: 2px solid rgb(224,28,21);
+  border-radius: 0;
+  margin-right: 15px;
+}
+.btn_red:hover{
+  background-color:rgb(224,28,21); 
+  color:#fff;
+}
 button.hover{
    background-color:rgb(217,215,215); 
   color:rgb(224,28,21);
   border: 2px solid rgb(224,28,21);
-  border-radius: 5px;
+}
+.button{
+  margin-top: 15px;
+}
+.btn_bg_gray{
+  border: 1px solid rgb(51, 51, 51);
+  border-radius: 0px!important;
+  color: rgb(51, 51, 51);
+  background-color: #fff;
+  margin-right: 20px;
+  padding: 15px 40px;
+}
+.btn_bg_black{
+  border: 1px solid rgb(51, 51, 51);
+  border-radius: 0px!important;
+  color: #fff!important;
+  background-color: rgb(51, 51, 51);
+  padding: 15px 40px;
+}
+.btn_bg_black:hover{
+  color: #fff!important;
+}
+#f_g{
+  margin-top: 30px;
+}
+.div-file{
+  position: relative;
+}
+.div-file img{
+  height: 40px;
+  margin-top: 5px;
+}
+.file{
+  line-height: 50px;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0px;
+}
+.sc{
+    background-color: rgb(217,217,217);
+    color: rgb(51, 51, 51);
+    padding: 8px 20px;
+    border: 1px solid rgb(51, 51, 51);
+    border-radius: 5px;
+    margin-top: 5px;
 }

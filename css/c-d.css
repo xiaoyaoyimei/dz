@@ -81,6 +81,7 @@
   }
 #body{
   overflow: hidden;
+  margin-bottom: 40px;
 }  
   #body>div{
     float: left;
@@ -132,11 +133,10 @@ background: red none repeat scroll 0 0;
       display: flex;
       justify-content: center;
 }
-.bxslider li img{
-  max-width: 486px;
-  max-height: 486px;
-
-}
+ .bxslider li img{
+   /* width: 50%;  */
+   height: 486px; 
+} 
 .sundry-wrap{
   flex: 1 1 auto;
     position: relative;
@@ -357,6 +357,7 @@ button.hover{
   position: absolute;
   top: 0;
   left: 0px;
+  cursor: pointer;
 }
 .sc{
     background-color: rgb(217,217,217);

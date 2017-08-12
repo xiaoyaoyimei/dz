@@ -367,3 +367,46 @@ button.hover{
     border-radius: 5px;
     margin-top: 5px;
 }
+.position{
+  position: relative;
+  height: 80px;
+}
+#img{
+  position: absolute;
+  top: 0px;
+  left: 10px;
+  opacity: 0;
+  z-index: 100000;
+}
+#source1{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.textSpan{
+  width:50%;
+  height:45px;
+  line-height:25px;
+  padding-bottom:20px;
+}
+.textpan{
+  padding: 15px;
+  float: left;
+
+}
+.textpan:nth-of-type(1){
+  padding-left: 0px;
+}
+#yzys div{
+  overflow: hidden;
+}
+.red{
+  color: rgb(224, 28, 21);
+  padding: 15px 0px;
+}
+.imgForm{
+  padding-left: 0px;
+}
+.padding0{
+  padding-left: 0px;
+}

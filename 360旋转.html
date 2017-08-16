@@ -1,0 +1,32 @@
+<html>
+    <title>js实现按钮控制图片360度翻转特效</title>
+    <body>
+    <script language="javascript">
+    var isIE = (document.uniqueID)?1:0;
+    var i=1;
+    function rotate(image)
+    {
+    var object = image.parentNode;
+    if(isIE){
+    image.style.filter="progid:dXImagetransform.Microsoft.basicImage(rotation="+i+")";
+    i++;
+           if(i>4) {i=1};
+    }
+    else{
+    try{
+    var canvas = document.createElement('canvas');
+    if(canvas.getContext("2d")) {
+    object.replaceChild(canvas,image);
+    var context = canvas.getContext("2d");
+    context.translate(176, 0);
+    context.rotate(Math.PI*0.5);
+    context.drawImage(image,0,0);
+    }
+    }catch(e){}
+    }
+    }
+    </script>
+    <input type="button" value="点击旋转图片" onclick="rotate(document.getElementById('myimg'))" /><br />
+    <img id="myimg" src="images/3d1.png"/>
+    </body>
+    </html>

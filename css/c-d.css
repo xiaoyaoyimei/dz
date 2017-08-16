@@ -410,3 +410,141 @@ button.hover{
 .padding0{
   padding-left: 0px;
 }
+#signin{
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+  height: 900px;
+}
+#signin .signin{
+  position: absolute;
+  top: 60px;
+  left: 0px;
+  width: 100%;
+}
+#signinTop{
+  margin-top: 40px;
+  position: absolute;
+  width: 1920px!important;
+  left: 50%;
+  margin-left: -960px;
+  z-index: 100;
+}
+#backGround{
+  /* height: 100%; */
+  width: 1920px!important;
+  position: absolute;
+  left: 50%;
+  margin-left: -960px;
+
+}
+#signin .signin #signinPosition>img{
+  display: block;
+  margin: 180px auto;
+  height: 380px;
+  width: 600px;
+  margin-bottom: 0px;
+}
+#signinPosition{
+  position: relative;
+  width: 100%;
+}
+#signinData{
+  position: absolute;
+  top: 0px;
+  left: calc(50% - 300px);
+  width: 600px;
+  overflow: hidden;
+}
+.signinData{
+  margin-top: 20px;
+  text-align: center;
+  position: relative;
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+  /* height: 40px; */
+  line-height: 40px;
+
+}
+.signinData img{
+  position: absolute;
+  left: 20px;
+  top: 10px;
+}
+.signinData input{
+  width: 100%;
+  padding-left: 60px;
+  border-radius: 5px;
+  border: 0px;
+}
+.signinData div{
+  float: left;
+}
+.signinData div:nth-of-type(1){
+  width: 60%;
+}
+.signinData div:nth-of-type(2){
+  width: 40%;
+}
+.signinData .check{
+  width: 60%;
+  position: absolute;
+  left: 0px;
+}
+.signinData .check1{
+  width: 38%;
+  position: absolute;
+  right: 0px;
+  padding: 0px;
+}
+
+.signinData span{
+  color: rgb(255, 255, 255);
+  float: left;
+}
+.register div{
+  float: right;
+  padding-right: 30px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+.clearfix:after {
+  content: " ";
+  display: block;
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  zoom: 1;
+}
+.signinData div:nth-of-type(2) img{
+  left: calc(600px - 84%);
+  top: 0px;
+  width: 30%;
+  height: 42px;
+}
+.signinData div:nth-of-type(2) span{
+  float: right;
+  padding-top: 40px;
+}
+.text-white{
+  color:rgb(255, 255, 255);
+}
+a:hover{
+  color: black!important;
+}
+.text_16{
+  font-size: 16px;
+}
+.text_23{
+  font-size: 23px;
+}
+#denglu{
+  background-color: rgb(224, 28, 21);
+  color:rgb(255, 255, 255);
+}
+.pointer{
+  cursor: pointer;
+}

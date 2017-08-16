@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/c-d.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/detail.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <title>DXracer定制登录</title>
+</head>
+
+<body>
+    <div id="signin">
+        <img id="signinTop" src="images/line.png" alt="">
+        <img id="backGround" src="images/bg.jpg" alt="">
+        <div class="signin">
+            <div id="signinPosition">
+                <img src="images/sbg.png" alt="">
+                <form id="signinData">
+                    <div class="register clearfix">
+                        <div><a class="red" href="">登录</a><a class="text-white" style="padding-left:30px;" href="register.html">马上注册</a></div>
+                    </div>
+                    <div class="signinData">
+                        <img src="images/nameicon.png" alt="">
+                        <input type="" class="text_16" placeholder="请输入用户名" name="" value="">
+                    </div>
+                    <div class="signinData">
+                        <img src="images/passwordicon.png" alt="">
+                        <input type="" class="text_16" placeholder="请输入密码" name="" value="">
+                    </div>
+                    <div class="signinData clearfix">
+                        <div>
+                            <img src="images/checkicon.png" style="z-index:10000" alt="">
+                            <input type="" class="check" class="text_16" placeholder="请输入验证码" name="" value=""><br>
+                            <span class="zhaohui pointer" >忘记密码？</span>
+                           
+                        </div>
+                        <div>
+                            <img src="images/checkicon.png" alt="">
+                            <span class="pointer">换一张？</span>
+                        </div>
+                    </div>
+                    <div class="signinData clearfix">
+                            <input type="submit" class="text_23" id="denglu" value="登录" style="padding:0px;">
+                        </div>
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="orderModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                            &times;
+                        </button>
+                  <h4 class="modal-title" id="myModalLabel">
+                    找回密码
+                  </h4>
+                </div>
+                <form class="panel-body form-horizontal" id="orderform" autocomplete="off">
+                  <div class="modal-body">
+                    <div class="form-group">
+                      <label class="col-md-3 control-label" for="traySku">手机号码</label>
+                      <div class="col-md-6">
+                        <input id="traySku" class="form-control" type="text" name="traySku">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-md-3 control-label" for="orderNo">验证码</label>
+                      <div class="col-md-3">
+                        <input id="orderNo" class="form-control" type="text" name="orderNo">
+                      </div>
+                      <div class="col-md-3">
+                            <img src="images/checkicon.png" style="width:110px;height:40px;" alt=""><br><br>
+                            <span class="pointer">换一张？</span>
+                          </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-md-3 control-label" for="series">短信验证码</label>
+                      <div class="col-md-3">
+                        <input id="series" class="form-control" type="text" name="series">
+                      </div>
+                      <div class="col-md-3">
+                            <input id="duanxin" class="form-control" type="button" value="短信验证码" name="series">
+                          </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" id="closeModal">关闭</button>
+                    <button type="submit" style="background-color:black;color:#fff" class="btn " id="saveOrder">提交</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+    <script>
+        $(".zhaohui").click(function(){
+            $("#myModal").modal("show");
+            $("#traySku").val();
+            $("#orderNo").val();
+            $("#series").val();
+        });
+        $("#saveOrder").click(function(e){
+            e.preventDefault()
+            window.location.href="reregister.html"
+        })
+    </script>
+
+
+</body>
+
+</html>

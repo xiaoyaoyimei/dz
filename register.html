@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/c-d.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/detail.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <title>DXracer定制注册</title>
+</head>
+
+<body>
+    <div id="signin">
+        <img id="signinTop" src="images/line.png" alt="">
+        <img id="backGround" src="images/bg.jpg"  alt="">
+        <div class="signin">
+            <div id="signinPosition">
+                <img src="images/sbg.png" style="height: 420px;" alt="">
+                <form id="signinData">
+                    <div class="register clearfix">
+                        <div><a class="text-white" href="signin.html">登录</a><a  style="padding-left:30px;" href="">注册</a></div>
+                    </div>
+                    <div class="signinData" style="margin-top:0px;margin-bottom:0px;">
+                        <p style="text-align:left;color:black">请使用手机号注册，*为必填项。</p>
+                    </div>
+                    <div class="signinData clearfix" >
+                        <div style="width:55%;margin-right:5%;">
+                            <img src="images/nameicon.png" alt="">
+                            <input type="" class="text_16" placeholder="*姓名"  name="" value="">
+                        </div>
+                        <div>
+                            <img src="images/peopleicon.png" style="width:16px;height:26px;left:65%;top:10px" alt="">
+                            <input type="" class="text_16" style="width:100%" placeholder="*性别" name="" value="">
+                        </div>
+                    </div>
+                    <div class="signinData">
+                        <img src="images/nameicon.png" alt="">
+                        <input type="" class="text_16" placeholder="*请输入用户名" name="" value="">
+                    </div>
+                    <div class="signinData">
+                        <img src="images/passwordicon.png" alt="">
+                        <input type="" class="text_16" placeholder="*请输入密码" name="" value="">
+                    </div>
+                    <div class="signinData">
+                            <img src="images/passwordicon.png" alt="">
+                            <input type="" class="text_16" placeholder="*请确认密码" name="" value="">
+                        </div>
+                    <div class="signinData clearfix">
+                        <input type="submit" class="text_23" id="denglu" value="注册" style="padding:0px;">
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+        
+    <script>
+        $("#denglu").click(function(e){
+            e.preventDefault()
+            window.location.href="signin.html"
+        })
+    </script>
+
+
+</body>
+
+</html>
